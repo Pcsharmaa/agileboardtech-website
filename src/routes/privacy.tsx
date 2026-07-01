@@ -1,18 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
 import { useCookies } from "@/context/CookieContext";
 
-export const Route = createFileRoute("/privacy")({
-  head: () => ({
-    meta: [
-      { title: "Privacy Policy — AgileBoardTech" },
-      { name: "description", content: "How AgileBoardTech collects, uses and protects personal information." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function PrivacyPage() {
   const { openSettings } = useCookies();
   return (
     <>

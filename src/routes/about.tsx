@@ -1,21 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeader } from "@/components/site/Section";
 import { milestones, teamMembers } from "@/data/placeholderData";
 import { Award, Building2, Heart } from "lucide-react";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About AgileBoardTech" },
-      { name: "description", content: "60+ years of meaningful work, an office-occasional culture, and a leadership team focused on impact." },
-      { property: "og:title", content: "About AgileBoardTech" },
-      { property: "og:description", content: "History, leadership and values of AgileBoardTech." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function AboutPage() {
   return (
     <>
       <PageHero eyebrow="About" title="A firm built on knowledge and people." lead="From a single Tampa office in 1962 to a national specialty firm, our mission has not changed: have a meaningful impact on every life we serve." />

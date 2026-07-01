@@ -1,31 +1,15 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { Link, useParams, Navigate } from "react-router-dom";
 import { PageHero } from "@/components/site/Section";
 import { jobs } from "@/data/placeholderData";
 import { ArrowLeft, Check, MapPin } from "lucide-react";
 
-export const Route = createFileRoute("/careers/$id")({
-  loader: ({ params }) => {
-    const job = jobs.find((j) => j.id === params.id);
-    if (!job) throw notFound();
-    return { job };
-  },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: loaderData ? `${loaderData.job.title} — AgileBoardTech Careers` : "Job — AgileBoardTech Careers" },
-      { name: "description", content: loaderData?.job.description ?? "Open role at AgileBoardTech." },
-    ],
-  }),
-  notFoundComponent: () => (
-    <div className="container-page py-24 text-center">
-      <h1 className="text-3xl font-bold">Role not found</h1>
-      <Link to="/careers" className="mt-6 inline-flex items-center gap-2 text-brand hover:underline"><ArrowLeft className="size-4" />Back to careers</Link>
-    </div>
-  ),
-  component: Page,
-});
+export function CareersDetailPage() {
+  const { id } = useParams();
+  const job = jobs.find((j) => j.id === id);
 
-function Page() {
-  const { job } = Route.useLoaderData();
+  if (!job) {
+    return <Navigate to="/404" replace />;
+  }
   return (
     <>
       <PageHero eyebrow={job.category} title={job.title}>
@@ -51,7 +35,7 @@ function Page() {
         <aside className="h-fit rounded-2xl border border-border bg-card p-6">
           <h3 className="text-lg font-bold">Apply now</h3>
           <p className="mt-2 text-sm text-muted-foreground">Submit your resume and a recruiter will reach out within two business days.</p>
-          <Link to="/careers" hash="submit" className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-md bg-brand px-5 text-sm font-semibold text-brand-foreground hover:bg-brand/90">Apply now</Link>
+          <Link to="/careers#submit" className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-md bg-brand px-5 text-sm font-semibold text-brand-foreground hover:bg-brand/90">Apply now</Link>
           <Link to="/careers" className="mt-3 inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"><ArrowLeft className="size-3" />All roles</Link>
         </aside>
       </section>

@@ -1,22 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { useMemo, useState } from "react";
 import { PageHero } from "@/components/site/Section";
 import { jobs } from "@/data/placeholderData";
 import { MapPin, Search } from "lucide-react";
 
-export const Route = createFileRoute("/careers")({
-  head: () => ({
-    meta: [
-      { title: "Careers at AgileBoardTech" },
-      { name: "description", content: "Search open roles across technology and professional services and submit your resume." },
-      { property: "og:title", content: "Careers at AgileBoardTech" },
-      { property: "og:description", content: "Search open roles and submit your resume." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function CareersPage() {
   const [q, setQ] = useState("");
   const [loc, setLoc] = useState("");
   const [cat, setCat] = useState("");
@@ -56,7 +44,7 @@ function Page() {
         <ul className="mt-4 space-y-3">
           {filtered.map((j) => (
             <li key={j.id}>
-              <Link to="/careers/$id" params={{ id: j.id }} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-brand sm:flex sm:items-center sm:justify-between">
+              <Link to={`/careers/${j.id}`} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-brand sm:flex sm:items-center sm:justify-between">
                 <div className="min-w-0">
                   <h3 className="truncate text-base font-bold sm:text-lg">{j.title}</h3>
                   <p className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">

@@ -1,19 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
 import { locations } from "@/data/placeholderData";
 import { MapPin, Phone } from "lucide-react";
 
-export const Route = createFileRoute("/locations")({
-  head: () => ({
-    meta: [
-      { title: "Locations — AgileBoardTech" },
-      { name: "description", content: "Find a AgileBoardTech office near you." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function LocationsPage() {
   return (
     <>
       <PageHero eyebrow="Locations" title="Local presence, national reach." lead="35+ offices and a coast-to-coast network of consultants." />

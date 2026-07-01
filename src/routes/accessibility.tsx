@@ -1,17 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
 
-export const Route = createFileRoute("/accessibility")({
-  head: () => ({
-    meta: [
-      { title: "Accessibility — AgileBoardTech" },
-      { name: "description", content: "Our commitment to web accessibility and how to reach us with feedback." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function AccessibilityPage() {
   return (
     <>
       <PageHero eyebrow="Accessibility" title="Designed for everyone." lead="We strive to meet WCAG 2.1 AA standards across our digital experiences." />

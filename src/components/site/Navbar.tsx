@@ -1,10 +1,8 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Logo from "../../../public/assets/logo.png";
 const links: Array<{ to: string; label: string }> = [
-  { to: "/solutions/talent", label: "Talent" },
-  { to: "/solutions/team", label: "Team" },
   { to: "/solutions/project", label: "Project" },
   { to: "/industries", label: "Industries" },
   { to: "/about", label: "About" },

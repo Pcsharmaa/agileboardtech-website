@@ -1,5 +1,5 @@
-import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Instagram, Linkedin } from "lucide-react";
 import { useCookies } from "@/context/CookieContext";
 import Logo from "../../../public/assets/logo.png";
 
@@ -58,8 +58,6 @@ export function Footer() {
 </div>
           </div>
           {col("Solutions", [
-            { to: "/solutions/talent", label: "Talent Solutions" },
-            { to: "/solutions/team", label: "Team Solutions" },
             { to: "/solutions/project", label: "Project Solutions" },
             { to: "/industries", label: "Industries" },
           ])}

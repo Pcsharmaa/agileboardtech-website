@@ -1,20 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { PageHero, SectionHeader } from "@/components/site/Section";
 import { Check } from "lucide-react";
 
-export const Route = createFileRoute("/solutions/talent")({
-  head: () => ({
-    meta: [
-      { title: "Talent Solutions — AgileBoardTech" },
-      { name: "description", content: "Connect with the best technology and professional talent in the marketplace, fast." },
-      { property: "og:title", content: "Talent Solutions — AgileBoardTech" },
-      { property: "og:description", content: "Specialized staffing for contract, contract-to-hire and direct placement." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function TalentSolutionsPage() {
   return (
     <>
       <PageHero eyebrow="Talent Solutions" title="The right people, ready when you are." lead="Save time finding the right resource for your team while we connect you with the best talent in the marketplace.">

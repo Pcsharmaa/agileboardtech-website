@@ -1,19 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeader } from "@/components/site/Section";
 
-export const Route = createFileRoute("/solutions/project")({
-  head: () => ({
-    meta: [
-      { title: "Project Solutions — AgileBoardTech" },
-      { name: "description", content: "Strategy-to-execution programs for the work that defines your year." },
-      { property: "og:title", content: "Project Solutions — AgileBoardTech" },
-      { property: "og:description", content: "Connect strategy to execution on your most challenging initiatives." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function ProjectSolutionsPage() {
   return (
     <>
       <PageHero eyebrow="Project Solutions" title="Strategy connected to execution." lead="Transform your business while we help you connect strategy to execution to tackle your most challenging initiatives." />

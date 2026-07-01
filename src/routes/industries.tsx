@@ -1,18 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
 import { industries } from "@/data/placeholderData";
 
-export const Route = createFileRoute("/industries")({
-  head: () => ({
-    meta: [
-      { title: "Industries — AgileBoardTech" },
-      { name: "description", content: "Deep delivery experience across technology, financial services, healthcare and communications." },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
+export function IndustriesPage() {
   return (
     <>
       <PageHero eyebrow="Industries" title="Where we go deep." lead="Specialty teams that already speak the language of your business." />

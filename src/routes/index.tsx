@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, Users, Briefcase, Compass } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Sparkles, Compass } from "lucide-react";
 import { insights } from "@/data/placeholderData";
 import { SectionHeader } from "@/components/site/Section";
-
-
 
 const heroImages = [
   "/images/hero1.jpg",
@@ -19,28 +17,12 @@ const heroImages = [
 ];
 
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "AgileBoardTech — Let's transform business, together" },
-      { name: "description", content: "Talent, Team and Project Solutions from a staffing and solutions firm with 60+ years of meaningful work." },
-      { property: "og:title", content: "AgileBoardTech — Let's transform business, together" },
-      { property: "og:description", content: "Talent, Team and Project Solutions for technology and professional services." },
-    ],
-  }),
-  component: Home,
-});
-
 const solutions = [
-  { to: "/solutions/talent", title: "Talent Solutions", icon: Users,
-    text: "Save time finding the right resource for your team while we connect you with the best talent in the marketplace." },
-  { to: "/solutions/team", title: "Team Solutions", icon: Briefcase,
-    text: "Take charge of your most valued initiatives while we provide a dedicated team offering technical expertise and services." },
   { to: "/solutions/project", title: "Project Solutions", icon: Compass,
     text: "Transform your business while we help you connect strategy to execution to tackle your most challenging initiatives." },
 ];
 
-function Home() {
+export function HomePage() {
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -131,8 +113,8 @@ function Home() {
 </section>
 
       <section className="container-page py-20 sm:py-28">
-        <SectionHeader eyebrow="Our spectrum of solutions" title="One firm. Three ways we deliver." subtitle="From a single specialist to a full delivery team, choose the engagement that matches the moment." />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <SectionHeader eyebrow="Our spectrum of solutions" title="One firm. One way we deliver." subtitle="From strategy through execution, we help teams move ambitious ideas forward." />
+        <div className="mt-12 grid gap-6 md:grid-cols-1">
           {solutions.map((s) => (
             <Link key={s.to} to={s.to} className="group relative flex flex-col rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-brand hover:shadow-xl">
               <s.icon className="size-8 text-brand" />

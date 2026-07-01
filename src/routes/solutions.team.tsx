@@ -1,21 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeader } from "@/components/site/Section";
-
-export const Route = createFileRoute("/solutions/team")({
-  head: () => ({
-    meta: [
-      { title: "Team Solutions — AgileBoardTech" },
-      { name: "description", content: "Dedicated, embedded teams with the technical expertise to deliver outcomes." },
-      { property: "og:title", content: "Team Solutions — AgileBoardTech" },
-      { property: "og:description", content: "A managed team model with the velocity of staff augmentation." },
-    ],
-  }),
-  component: Page,
-});
 
 const skills = ["Cloud & DevOps", "Data Engineering", "Generative AI", "Salesforce", "Cybersecurity", "Modern Web", "Mobile", "SAP"];
 
-function Page() {
+export function TeamSolutionsPage() {
   return (
     <>
       <PageHero eyebrow="Team Solutions" title="A dedicated team. Outcomes you own." lead="Take charge of your most valued initiatives while we provide a dedicated team offering technical expertise and services." />
