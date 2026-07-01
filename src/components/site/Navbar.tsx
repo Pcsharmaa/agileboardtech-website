@@ -45,7 +45,7 @@ export function Navbar() {
             to="/careers"
             className="inline-flex h-10 items-center rounded-md bg-brand px-4 text-sm font-semibold text-brand-foreground transition-colors hover:bg-brand/90"
           >
-            Submit 
+            Contact us 
           </Link>
         </div>
         <button
