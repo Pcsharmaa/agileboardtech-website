@@ -45,7 +45,7 @@ export function Navbar() {
             to="/careers"
             className="inline-flex h-10 items-center rounded-md bg-brand px-4 text-sm font-semibold text-brand-foreground transition-colors hover:bg-brand/90"
           >
-            Contact us 
+            Contact Us 
           </Link>
         </div>
         <button
@@ -76,7 +76,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex h-10 items-center justify-center rounded-md bg-brand px-4 text-sm font-semibold text-brand-foreground"
             >
-              Submit a r
+               Contact Us 
             </Link>
           </nav>
         </div>
