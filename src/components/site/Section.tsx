@@ -12,12 +12,23 @@ export function SectionHeader({ eyebrow, title, subtitle, align = "left" }: {
   );
 }
 
-export function PageHero({ eyebrow, title, lead, children }: {
-  eyebrow?: string; title: string; lead?: string; children?: ReactNode;
+export function PageHero({ eyebrow, title, lead, children, image }: {
+  eyebrow?: string; title: string; lead?: string; children?: ReactNode; image?: string | { src: string };
 }) {
+  const defaultBase = eyebrow
+    ? eyebrow.replace(/\s+Solutions$/i, "")
+    : title;
+  const defaultImageName = defaultBase.toLowerCase().replace(/\s+/g, "-");
+  const resolvedImage = image ? (typeof image === "string" ? image : image.src) : `/images/${defaultImageName}.jpg`;
+
   return (
-    <section className="hero-gradient text-white">
-      <div className="container-page py-20 sm:py-28">
+    <section className="relative overflow-hidden text-white min-h-[25rem] sm:min-h-[33rem]">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${resolvedImage})` }}
+      />
+      <div className="absolute inset-0 bg-black/45" />
+      <div className="container-page relative z-10 py-20 sm:py-28">
         {eyebrow && <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">{eyebrow}</p>}
         <h1 className="max-w-4xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">{title}</h1>
         {lead && <p className="mt-6 max-w-2xl text-lg text-white/80">{lead}</p>}

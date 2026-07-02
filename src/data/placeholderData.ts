@@ -123,7 +123,7 @@ export const teamMembers = [
 {
 id: "1",
 name: "Prafull Sharma",
-title: "Founder & CEO",
+title: "Sr Software Engineer",
 bio: "Leading AgileBoard Technology in delivering innovative software and AI-powered solutions.",
 },
 {
@@ -178,18 +178,18 @@ icon: "☁️",
 ];
 
 export const locations = [
-{
-id: "1",
-name: "Head Office",
-address: "Ghaziabad, Uttar Pradesh, India",
-phone: "+91 XXXXX XXXXX",
-},
-{
-id: "2",
-name: "Development Center",
-address: "Noida, Uttar Pradesh, India",
-phone: "+91 XXXXX XXXXX",
-},
+  {
+    id: "1",
+    name: "US Office",
+    address: "5680 King Centre Dr, Ste #1, Kingstowne, VA 22315, USA",
+    // phone: "+1 XXX XXX XXXX",
+  },
+  {
+    id: "2",
+    name: "India Office",
+    address: "A-74, Second Floor, Sector-63, Noida, Uttar Pradesh, India - 201301",
+    // phone: "+91 XXXXX XXXXX",
+  },
 ];
 
 export const milestones = [

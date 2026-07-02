@@ -36,7 +36,7 @@ export function HomePage() {
 
   return (
     <>
-   <section className="hero-gradient relative overflow-hidden text-white">
+   <section className="relative overflow-hidden text-white">
   {/* Background Slider */}
   <div className="absolute inset-0">
     {heroImages.map((image, index) => (
@@ -51,9 +51,6 @@ export function HomePage() {
         }`}
       />
     ))}
-
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-black/60" />
   </div>
 
   {/* Content */}
@@ -61,7 +58,7 @@ export function HomePage() {
     <div className="lg:col-span-7">
       <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-white/80">
         <Sparkles className="size-3.5" />
-        60+ years of meaningful work
+         years of meaningful work
       </p>
 
       <h1 className="font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
@@ -93,7 +90,7 @@ export function HomePage() {
         </Link>
       </div>
 
-      <dl className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-white/15 pt-8 text-white">
+      {/* <dl className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-white/15 pt-8 text-white">
         {[
           ["60+", "years"],
           ["1,000+", "clients served"],
@@ -106,7 +103,7 @@ export function HomePage() {
             </dd>
           </div>
         ))}
-      </dl>
+      </dl> */}
     </div>
 
   </div>
@@ -137,7 +134,7 @@ export function HomePage() {
             </h2>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg">
               At AgileBoardTech, we strive to live that promise every day — and have helped our clients, candidates and consultants find
-              meaningful work and innovative business solutions for 60 years.
+              meaningful work and innovative business solutions for many years.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">

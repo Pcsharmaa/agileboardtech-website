@@ -3,13 +3,17 @@ import { Instagram, Linkedin } from "lucide-react";
 import { useCookies } from "@/context/CookieContext";
 import Logo from "../../../public/assets/logo.png";
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 const col = (heading: string, items: Array<{ to: string; label: string }>) => (
   <div>
     <h4 className="mb-3 text-sm font-semibold tracking-wide text-foreground uppercase">{heading}</h4>
     <ul className="space-y-2">
       {items.map((i) => (
         <li key={i.to}>
-          <Link to={i.to} className="text-sm text-muted-foreground hover:text-foreground">{i.label}</Link>
+          <Link to={i.to} onClick={scrollToTop} className="text-sm text-muted-foreground hover:text-foreground">{i.label}</Link>
         </li>
       ))}
     </ul>

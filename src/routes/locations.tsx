@@ -5,7 +5,7 @@ import { MapPin, Phone } from "lucide-react";
 export function LocationsPage() {
   return (
     <>
-      <PageHero eyebrow="Locations" title="Local presence, national reach." lead="35+ offices and a coast-to-coast network of consultants." />
+      <PageHero eyebrow="Locations" title="Local presence, national reach." lead=" offices and a coast-to-coast network of consultants." />
       <section className="container-page py-16">
         <div className="overflow-hidden rounded-2xl border border-border bg-card">
           <div className="aspect-[16/7] w-full bg-muted">
@@ -13,7 +13,8 @@ export function LocationsPage() {
   title="AgileBoardTech Location"
   className="size-full"
   loading="lazy"
-  src="https://maps.google.com/maps?q=Ghaziabad,Uttar%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+ 
+  src="https://maps.google.com/maps?q=5680%20King%20Centre%20Dr,%20Ste%201,%20Kingstowne,%20VA%2022315,%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed"
 />
           </div>
         </div>
@@ -23,7 +24,7 @@ export function LocationsPage() {
             <article key={l.id} className="rounded-2xl border border-border bg-card p-6">
               <h3 className="text-lg font-bold">{l.name}</h3>
               <p className="mt-3 flex items-start gap-2 text-sm text-muted-foreground"><MapPin className="mt-0.5 size-4 shrink-0 text-brand" />{l.address}</p>
-              <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground"><Phone className="size-4 text-brand" />{l.phone}</p>
+              
             </article>
           ))}
         </div>
