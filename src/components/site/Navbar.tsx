@@ -3,11 +3,11 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Logo from "../../../public/assets/logo.png";
 const links: Array<{ to: string; label: string }> = [
-  { to: "/solutions/project", label: "Project" },
+  // { to: "/solutions/project", label: "Project" },
   { to: "/industries", label: "Industries" },
   { to: "/about", label: "About" },
   { to: "/careers", label: "Careers" },
-  { to: "/locations", label: "Locations" },
+  // { to: "/locations", label: "Locations" },
 ];
 
 export function Navbar() {

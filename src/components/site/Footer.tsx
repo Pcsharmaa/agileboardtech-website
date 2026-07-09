@@ -35,14 +35,13 @@ export function Footer() {
             />
           </div>
 
-          <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            Transforming businesses through exceptional talent, innovative teams,
-            and technology-driven solutions.
-          </p>
+        <p className="mt-4 max-w-sm text-sm text-muted-foreground">
+  Connecting exceptional talent with leading organizations across the United States through trusted staffing, recruitment, and workforce solutions.
+</p>
            <div className="mt-5 flex gap-3 text-muted-foreground">
   <a
-    href="https://www.linkedin.com/in/prafull-sharma-0222b71a5"
-    target="_blank"
+    href=""
+    // target="_blank"
     rel="noopener noreferrer"
     aria-label="LinkedIn"
     className="grid size-9 place-items-center rounded-full border border-border transition-colors hover:text-foreground"
@@ -51,8 +50,8 @@ export function Footer() {
   </a>
 
   <a
-    href="https://www.instagram.com/p.c.sharmaa/"
-    target="_blank"
+    href=""
+    // target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
     className="grid size-9 place-items-center rounded-full border border-border transition-colors hover:text-foreground"
@@ -62,18 +61,18 @@ export function Footer() {
 </div>
           </div>
           {col("Solutions", [
-            { to: "/solutions/project", label: "Project Solutions" },
+            // { to: "/solutions/project", label: "Project Solutions" },
             { to: "/industries", label: "Industries" },
           ])}
           {col("Company", [
             { to: "/about", label: "About" },
             { to: "/careers", label: "Careers" },
-            { to: "/locations", label: "Locations" },
+            // { to: "/locations", label: "Locations" },
           ])}
-          {col("Legal", [
-            { to: "/privacy", label: "Privacy Policy" },
-            { to: "/accessibility", label: "Accessibility" },
-          ])}
+          {/* {col("Legal", [
+            // { to: "/privacy", label: "Privacy Policy" },
+            // { to: "/accessibility", label: "Accessibility" },
+          ])} */}
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} AgileBoardTech Inc. All rights reserved.</p>
