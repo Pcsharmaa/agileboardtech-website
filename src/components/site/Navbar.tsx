@@ -10,6 +10,10 @@ const links: Array<{ to: string; label: string }> = [
   { to: "/locations", label: "Contact Us" },
 ];
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -20,6 +24,7 @@ export function Navbar() {
         {/* Logo */}
         <Link
           to="/"
+          onClick={scrollToTop}
           className="flex items-center font-display text-xl font-bold tracking-tight"
         >
           <img
@@ -39,6 +44,7 @@ export function Navbar() {
             <NavLink
               key={l.to}
               to={l.to}
+              onClick={scrollToTop}
               className={({ isActive }) =>
                 `text-sm font-medium transition-colors ${
                   isActive
@@ -76,7 +82,10 @@ export function Navbar() {
               <NavLink
                 key={l.to}
                 to={l.to}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  scrollToTop();
+                }}
                 className={({ isActive }) =>
                   `rounded-md px-3 py-2 text-sm font-medium ${
                     isActive
