@@ -67,7 +67,7 @@ export function Footer() {
           {col("Company", [
             { to: "/about", label: "About" },
             { to: "/careers", label: "Careers" },
-            // { to: "/locations", label: "Locations" },
+            { to: "/locations", label: "Contact Us" },
           ])}
           {/* {col("Legal", [
             // { to: "/privacy", label: "Privacy Policy" },

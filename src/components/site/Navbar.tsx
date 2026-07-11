@@ -4,10 +4,10 @@ import { useState } from "react";
 import Logo from "../../../public/assets/logo.png";
 const links: Array<{ to: string; label: string }> = [
   // { to: "/solutions/project", label: "Project" },
-  { to: "/industries", label: "Industries" },
   { to: "/about", label: "About" },
+  { to: "/industries", label: "Industries" },
   { to: "/careers", label: "Careers" },
-  // { to: "/locations", label: "Locations" },
+  { to: "/locations", label: "Contact Us" },
 ];
 
 export function Navbar() {
@@ -42,21 +42,12 @@ export function Navbar() {
         </nav>
         <div className="hidden lg:block">
           <Link
-            to="/careers"
-            className="inline-flex h-10 items-center rounded-md bg-brand px-4 text-sm font-semibold text-brand-foreground transition-colors hover:bg-brand/90"
+           to=""
+            className="inline-flex h-10 items-center rounded-md px-4 text-sm font-semibold text-brand-foreground transition-colors hover:bg-brand/90"
           >
-            Contact Us 
+          
           </Link>
-        </div>
-        <button
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border lg:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        </div> 
       </div>
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
