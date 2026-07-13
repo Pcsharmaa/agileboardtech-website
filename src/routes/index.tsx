@@ -139,11 +139,12 @@ export function HomePage() {
           </div>
           <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">Our philosophy</p>
-            <h3 className="mt-3 font-display text-2xl font-bold">AgileBoardTech stands for KNOWLEDGEforce®</h3>
-            <p className="mt-4 text-muted-foreground">
-              The "K" represents the most valuable currency in modern business — knowledge. Our people, processes and partnerships
-              are designed to compound that knowledge into outcomes our clients can measure.
-            </p>
+           <h3 className="mt-3 font-display text-2xl font-bold">
+  Connecting Talent with Opportunity
+</h3>
+           <p className="mt-4 text-muted-foreground">
+  We believe great careers begin with the right opportunities. AgileBoardTech brings together talented professionals and trusted employers through a streamlined hiring platform designed to make recruitment faster, smarter, and more transparent.
+</p>
             <ul className="mt-6 grid gap-3 text-sm">
               {["Specialty focus on Technology & FA", "Consultant-first culture", "Office-occasional hybrid model"].map((t) => (
                 <li key={t} className="flex items-start gap-2"><span className="mt-1 size-1.5 rounded-full bg-brand" />{t}</li>

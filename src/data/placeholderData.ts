@@ -214,7 +214,7 @@ export const teamMembers = [
   {
     id: "2",
     name: "Akash Raj",
-    title: "Co-Founder",
+    title: "President",
     bio: "Akash Raj leads operational excellence and recruitment strategy, helping clients build high-performing teams through innovative staffing solutions.",
   },
 ];
