@@ -208,14 +208,14 @@ export const teamMembers = [
     id: "1",
     name: "Ajay Rajput",
     title: "Founder & CEO",
-    bio: "Ajay Rajput founded the company with a vision to connect exceptional talent with leading organizations across the United States. He drives business strategy, client partnerships, and long-term growth.",
+    bio: "",
    
   },
   {
     id: "2",
     name: "Akash Raj",
     title: "President",
-    bio: "Akash Raj leads operational excellence and recruitment strategy, helping clients build high-performing teams through innovative staffing solutions.",
+    bio: "",
   },
 ];
 
